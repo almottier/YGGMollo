@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>YGGMollo</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 15px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header img {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .torrent-info {
+      background: #f8f9fa;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 15px;
+    }
+
+    .torrent-name {
+      font-weight: 500;
+      margin-bottom: 6px;
+      word-wrap: break-word;
+    }
+
+    .torrent-id {
+      color: #666;
+      font-size: 12px;
+    }
+
+    .button {
+      width: 100%;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-bottom: 8px;
+    }
+
+    .button-primary {
+      background: #28a745;
+      color: white;
+    }
+
+    .button-primary:hover:not(:disabled) {
+      background: #218838;
+    }
+
+    .button-secondary {
+      background: #6c757d;
+      color: white;
+    }
+
+    .button-secondary:hover:not(:disabled) {
+      background: #5a6268;
+    }
+
+    .button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .no-torrent {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+
+    .no-torrent p {
+      margin: 8px 0;
+    }
+
+    .status {
+      padding: 8px 12px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .status-success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .status-error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/icon48.png" alt="YGGMollo">
+    <h1>YGGMollo</h1>
+  </div>
+
+  <div id="status" class="status hidden"></div>
+
+  <div id="torrentSection" class="hidden">
+    <div class="torrent-info">
+      <div class="torrent-name" id="torrentName"></div>
+      <div class="torrent-id">ID: <span id="torrentId"></span></div>
+    </div>
+
+    <button id="downloadBtn" class="button button-primary">
+      Télécharger via Ygg-API
+    </button>
+  </div>
+
+  <div id="noTorrent" class="no-torrent hidden">
+    <p>Aucun torrent détecté</p>
+    <p style="font-size: 12px; color: #999;">Naviguez sur une page torrent YGGTorrent</p>
+  </div>
+
+  <button id="optionsBtn" class="button button-secondary">
+    Configurer la passkey
+  </button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

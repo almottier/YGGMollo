@@ -2,6 +2,7 @@
   <img src="icons/icon.png" alt="YGGMollo" width="128">
 </p>
 
+
 # YGGMollo
 
 Extension Chrome qui ajoute un bouton Télécharger via [Ygg-API](https://yggapi.eu) sur les pages YGGTorrent.
